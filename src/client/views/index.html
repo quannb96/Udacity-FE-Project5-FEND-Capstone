@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Travel App</title>
+  </head>
+
+  <body>
+    <header class="header">
+      <h2><a href="#">Travel App</a></h2>
+    </header>
+    <main class="main">
+      <form id="urlForm">
+        <label for="destination">City: </label><br />
+        <input
+          id="destination"
+          type="text"
+          name="city"
+          placeholder="Enter city"
+          required
+        />
+        <br />
+        <label for="start">Start Date: </label><br />
+        <input
+          id="start"
+          type="date"
+          name="start"
+          placeholder="dd/mm/yyyy"
+          required
+        />
+        <div>
+          <p id="status"></p>
+        </div>
+        <button id="form-submit" type="submit">Submit</button>
+      </form>
+      <section id="model-planner">
+        <h2 class="planner-title"><strong>Travel Planner</strong></h2>
+        <div class="modal-responsive">
+          <div class="img-section">
+            <img src="" id="modal-img" />
+          </div>
+          <div class="trip-info">
+            <h2 class="modal-title">
+              My trip to <span class="modal-city"></span>,
+              <span class="modal-country"></span>
+            </h2>
+            <h2 class="modal-title">
+              Departing <span id="modal-start-date"></span>
+            </h2>
+            <div class="trip-btn">
+              <button class="save">save trip</button>
+              <button class="remove">remove trip</button>
+            </div>
+
+            <p class="modal-time">
+              <span class="modal-city"></span>,
+              <span class="modal-country"></span> is
+              <span id="modal-timeRemaining"></span> days away
+            </p>
+            <p class="title-weather">Typical weather for then is:</p>
+            <p>Temp: <span id="modal-temp"></span></p>
+            <p><span id="modal-weather"></span></p>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <script>
+      // Check that service workers are supported
+      if ("serviceWorker" in navigator) {
+        // Use the window load event to keep the page load performant
+        window.addEventListener("load", () => {
+          navigator.serviceWorker.register("/service-worker.js");
+        });
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,114 @@
+body {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0 auto;
+    font-size: 16px;
+}
+
+.header {
+    border-bottom: 1px solid black;
+    padding: 0 15vw;
+}
+
+.main {
+    margin: 10px 15vw;
+}
+
+#urlForm {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    input {
+        width: 50%;
+        height: 30px;
+        border-radius: 6px;
+        padding: 8px 8px;
+    }
+
+    label {
+        font-weight: 500;
+        font-size: 16px;
+    }
+
+    button {
+        padding: 8px 12px;
+        background-color: #FFEDEE;
+        border-radius: 6px;
+        cursor: pointer;
+        font-weight: 500;
+        color: #000000;
+    }
+
+    #status {
+        color: red;
+    }
+}
+
+#model-planner {
+    background-color: #FFEDEE;
+    padding: 10px 1px;
+    margin-top: 30px;
+
+    .planner-title {
+        padding-left: 30px;
+		margin: 20px auto;
+		width: 100%;
+    }
+}
+
+.modal-responsive {
+    height: auto;
+    padding: 10px 30px;
+    margin: 10px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 5vw;
+    justify-items: center;
+
+    .img-section {
+        width: 100%;
+        height: auto;
+
+        #modal-img {
+            width: 100%;
+            height: auto;
+        }
+    }
+
+}
+
+.trip-info {
+
+    .modal-time,
+    .title-weather {
+        font-size: 20px;
+    }
+
+    .trip-btn {
+        .save {
+            border: 2px solid black;
+            background-color: #ffffff;
+            color: #000000;
+            padding: 6px 8px;
+        }
+
+        .remove {
+            border: 2px solid white;
+            background-color: #FFEDEE;
+            color: #5d5c5c;
+            padding: 6px 8px;
+        }
+    }
+}
+
+#model-planner {
+    display: none;
+}
+
+@media (max-width: 768px) {
+    .modal-responsive {
+        grid-template-columns: 1fr;
+    }
+}
